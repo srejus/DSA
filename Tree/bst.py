@@ -43,6 +43,14 @@ class BinarySearchTree:
                 self.get_data(res,node.right)
             
         return res
+
+    def tree_height(self,node=None):
+        if node is None:
+            return 0
+        
+        left_height = self.tree_height(node.left)
+        right_height = self.tree_height(node.right)
+        return 1 + max(left_height,right_height)
     
     
 
@@ -51,7 +59,10 @@ x = BinarySearchTree(10)
 x.add_child(5)
 x.add_child(15)
 data = x.get_data()
+height = x.tree_height(x.root)
+
 print(data)
+print(height)
         
         
         
