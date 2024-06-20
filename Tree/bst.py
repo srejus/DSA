@@ -1,3 +1,5 @@
+from collections import deque
+
 class TreeNode:
     def __init__(self,data):
         self.data = data
@@ -74,6 +76,31 @@ class BinarySearchTree:
             node.data = curr.data
             node.right = self.delete_node(node.right,node.data)
         return node
+
+    def level_order_traversal(self,root):
+        if not root:
+            return []
+    
+        res = []
+        queue = deque([root])
+
+        while queue:
+            level = []
+            level_size = len(queue)
+        
+            for _ in range(level_size):
+                node = queue.popleft()
+                level.append(node.data)
+
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            
+            res.append(level)
+        
+        return res
+
     
     
 
@@ -83,6 +110,10 @@ x.add_child(5)
 x.add_child(15)
 data = x.get_data()
 height = x.tree_height(x.root)
+
+lvl = x.level_order_traversal(x.root)
+print(lvl)
+
 
 print(data)
 print(height)
