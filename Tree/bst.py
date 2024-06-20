@@ -23,13 +23,13 @@ class BinarySearchTree:
                 new_node = TreeNode(data)
                 node.left = new_node
             else:
-                self.add_child(data,self.left)
+                self.add_child(data,node.left)
         else:
             if node.right is None:
                 new_node = TreeNode(data)
                 node.right = new_node
             else:
-                self.add_child(data,self.right)
+                self.add_child(data,node.right)
                 
                 
                 
@@ -108,14 +108,16 @@ class BinarySearchTree:
 x = BinarySearchTree(10)
 x.add_child(5)
 x.add_child(15)
+x.add_child(25)
+
 data = x.get_data()
 height = x.tree_height(x.root)
 
 lvl = x.level_order_traversal(x.root)
-print(lvl)
+# print(lvl)
 
 
-print(data)
+# print(data)
 print(height)
         
         
