@@ -52,6 +52,29 @@ class BinarySearchTree:
         right_height = self.tree_height(node.right)
         return 1 + max(left_height,right_height)
     
+
+    def delete_node(self,node,key):
+        if not node:
+            return node
+        
+        if key < node.data:
+            node.left = self.delete_node(node.left,key)
+        elif key > node.data:
+            node.right = self.delete_node(node.right,key)
+        else:
+            if not node.left:
+                return node.right
+            if not node.right:
+                return node.left
+            
+            curr = node
+            while curr.left:
+                curr.left
+            
+            node.data = curr.data
+            node.right = self.delete_node(node.right,node.data)
+        return node
+    
     
 
 
