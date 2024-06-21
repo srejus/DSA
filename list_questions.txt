@@ -1,0 +1,89 @@
+1. Two Sum Problem
+Question: Given a list of integers and a target sum, find two distinct elements in the list that add up to the target sum.
+Explanation: You need to identify two numbers in the list that, when added together, equal the given target sum.
+Sample Input: [2, 7, 11, 15], target = 9
+Sample Output: [0, 1] (since 2 + 7 = 9)
+Complexity: 
+𝑂(𝑛)
+O(n) using a dictionary
+
+2. Rotate List
+Question: Given a list, rotate the list to the right by k steps, where k is non-negative.
+Explanation: Move each element of the list k positions to the right.
+Sample Input: [1, 2, 3, 4, 5], k = 2
+Sample Output: [4, 5, 1, 2, 3]
+Complexity: 
+𝑂(𝑛)
+O(n)
+
+3. Find Duplicates
+Question: Given a list of integers, find all the elements that appear more than once.
+Explanation: Identify all elements that have duplicates in the list.
+Sample Input: [4, 3, 2, 7, 8, 2, 3, 1]
+Sample Output: [2, 3]
+Complexity: 
+𝑂(𝑛)
+O(n) using a dictionary
+
+4. Merge Intervals
+Question: Given a list of intervals, merge all overlapping intervals.
+Explanation: Combine all intervals that overlap into a single interval.
+Sample Input: [[1,3],[2,6],[8,10],[15,18]]
+Sample Output: [[1,6],[8,10],[15,18]]
+Complexity: 
+𝑂(𝑛log⁡ 𝑛)
+O(nlogn) due to sorting
+
+5. Longest Consecutive Sequence
+Question: Given an unsorted list of integers, find the length of the longest consecutive elements sequence.
+Explanation: Find the longest sequence of consecutive numbers in the list.
+Sample Input: [100, 4, 200, 1, 3, 2]
+Sample Output: 4 (because [1, 2, 3, 4] is the longest sequence)
+Complexity: 
+𝑂(𝑛)
+O(n)
+
+6. Subarray Sum Equals K
+Question: Given a list of integers and an integer k, find the total number of continuous subarrays whose sum equals to k.
+Explanation: Count all subarrays that sum to k.
+Sample Input: [1, 1, 1], k = 2
+Sample Output: 2 (subarrays [1, 1] and [1, 1])
+Complexity: 
+𝑂(𝑛)
+O(n)
+
+7. Remove Duplicates
+Question: Given a sorted list of integers, remove the duplicates in-place such that each element appears only once.
+Explanation: Modify the list to remove duplicate values without using extra space.
+Sample Input: [1, 1, 2]
+Sample Output: [1, 2]
+Complexity: 
+𝑂(𝑛)
+O(n)
+
+8. Product of Array Except Self
+Question: Given a list of integers, return an array such that each element at index i is the product of all the elements in the original list except the one at i.
+Explanation: Compute the product of all elements except the current one without using division.
+Sample Input: [1, 2, 3, 4]
+Sample Output: [24, 12, 8, 6]
+Complexity: 
+𝑂(𝑛)
+O(n)
+
+9. Majority Element
+Question: Given a list of size n, find the majority element. The majority element is the element that appears more than n/2 times.
+Explanation: Identify the element that appears more than half the time in the list.
+Sample Input: [3, 2, 3]
+Sample Output: 3
+Complexity: 
+𝑂(𝑛)
+O(n)
+
+10. Next Permutation
+Question: Implement the next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+Explanation: Modify the list to get the next permutation in order.
+Sample Input: [1, 2, 3]
+Sample Output: [1, 3, 2]
+Complexity: 
+𝑂(𝑛)
+O(n)
