@@ -7,6 +7,85 @@ Sample Input: [1, 1, 1], k = 2
 Sample Output: 2 (subarrays [1, 1] and [1, 1])
 Complexity: 
 O(n)
+'''
+
+'''
+
+Example 1
+    Input: [1, 2, 3], 
+    𝑘
+    =
+    3
+    k=3
+
+    Output: 2
+
+    Explanation:
+
+    Subarrays that sum to 
+    3
+    3 are [1, 2] and [3].
+    Therefore, the output is 2.
+    Example 2
+    Input: [1, 1, 1, 1], 
+    𝑘
+    =
+    2
+    k=2
+
+    Output: 3
+
+    Explanation:
+
+    Subarrays that sum to 
+    2
+    2 are [1, 1], [1, 1], and [1, 1] (considering different starting points).
+    Therefore, the output is 3.
+    Example 3
+    Input: [1, 2, 1, 2, 1], 
+    𝑘
+    =
+    3
+    k=3
+
+    Output: 4
+
+    Explanation:
+
+    Subarrays that sum to 
+    3
+    3 are [1, 2], [2, 1], [1, 2], and [2, 1].
+    Therefore, the output is 4.
+    Example 4
+    Input: [-1, -1, 1, 1], 
+    𝑘
+    =
+    0
+    k=0
+
+    Output: 4
+
+    Explanation:
+
+    Subarrays that sum to 
+    0
+    0 are [-1, 1], [1, -1], [-1, -1, 1, 1], and [-1, -1, 1, 1].
+    Therefore, the output is 4.
+    Example 5
+    Input: [1, -1, 1, -1, 1], 
+    𝑘
+    =
+    0
+    k=0
+
+    Output: 5
+
+    Explanation:
+
+    Subarrays that sum to 
+    0
+    0 are [1, -1], [-1, 1], [1, -1], [1, -1, 1, -1], and [1, -1, 1, -1, 1].
+    Therefore, the output is 5.
 
 
 '''
