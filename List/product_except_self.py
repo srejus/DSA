@@ -1,0 +1,30 @@
+'''
+Product of Array Except Self
+Question: Given a list of integers, return an array such that each element at index i is the product of all the elements in the original list except the one at i.
+Explanation: Compute the product of all elements except the current one without using division.
+Sample Input: [1, 2, 3, 4]
+Sample Output: [24, 12, 8, 6]
+Complexity: 
+O(n)
+'''
+
+def product_except_self(arr):
+    n = len(arr)
+    if n == 0:
+        return []
+
+    output = [1]*n
+    left_product = 1
+    for i in range(n):
+        output[i] = left_product
+        left_product *= arr[i]
+    
+    right_product = 1
+    for i in range(n-1,-1,-1):
+        output[i] *= right_product
+        right_product *= arr[i]
+    
+    return output
+
+nums = [1, 2, 3, 4]
+print(product_except_self(nums))
