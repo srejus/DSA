@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse List</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse List</h1>
+    <p>Given an input list, reverse the list in place.</p>
+    <h2>Sample Input:</h2>
+    <pre><code>[1, 2, 3]</code></pre>
+    <h2>Sample Output:</h2>
+    <pre><code>[3, 2, 1]</code></pre>
+    <h2>Complexity:</h2>
+    <p>O(n) - space</p>
+    <p>O(1) - time</p>
+    <h2>Python Code:</h2>
+    <pre><code>
+def rev_list(arr):
+    left = 0
+    right = len(arr) - 1
+
+    while left < right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+    
+    return arr
+
+arr = [1, 2, 3]
+print(rev_list(arr))
+    </code></pre>
+    <h2>Output:</h2>
+    <pre><code>[3, 2, 1]</code></pre>
+</body>
+</html>

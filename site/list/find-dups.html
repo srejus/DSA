@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Duplicates in Array</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Duplicates in Array</h1>
+    <p>Given a list of integers, find all the elements that appear more than once.</p>
+    <h2>Question:</h2>
+    <p>Identify all elements that have duplicates in the list.</p>
+    <h2>Sample Input:</h2>
+    <pre><code>[4, 3, 2, 7, 8, 2, 3, 1]</code></pre>
+    <h2>Sample Output:</h2>
+    <pre><code>[2, 3]</code></pre>
+    <h2>Complexity:</h2>
+    <p>O(n) using a dictionary</p>
+    <h2>Python Code:</h2>
+    <pre><code>
+def find_duplicates(arr):
+    frequency = {}
+    duplicates = []
+
+    for num in arr:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+    
+    for key, value in frequency.items():
+        if value > 1:
+            duplicates.append(key)
+    
+    return duplicates
+
+arr = [2, 1, 5, 4, 2, 7, 9, 7]
+x = find_duplicates(arr)
+print(x)
+    </code></pre>
+    <h2>Output:</h2>
+    <pre><code>[2, 7]</code></pre>
+</body>
+</html>

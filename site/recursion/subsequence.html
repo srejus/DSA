@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate All Subsets of an Array</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate All Subsets of an Array</h1>
+    <p>Generate all possible subsets of an array using recursion.</p>
+    
+    <h2>Python Code:</h2>
+    <pre><code>
+arr = [3, 1, 2]
+n = 3
+
+def func(idx=0, lst=[]):
+    if idx >= n:
+        print(lst)
+        return
+    
+    lst.append(arr[idx])
+    func(idx + 1, lst)
+    lst.pop()
+    func(idx + 1, lst)
+
+func()
+    </code></pre>
+</body>
+</html>

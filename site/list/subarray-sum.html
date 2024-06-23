@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subarray Sum Equals K</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subarray Sum Equals K</h1>
+    <p>Given a list of integers and an integer k, find the total number of continuous subarrays whose sum equals to k.</p>
+    
+    <h2>Examples:</h2>
+
+    <h3>Example 1:</h3>
+    <pre><code>
+Input: [1, 2, 3], k = 3
+Output: 2
+Explanation:
+Subarrays that sum to 3 are [1, 2] and [3].
+Therefore, the output is 2.
+    </code></pre>
+
+    <h3>Example 2:</h3>
+    <pre><code>
+Input: [1, 1, 1, 1], k = 2
+Output: 3
+Explanation:
+Subarrays that sum to 2 are [1, 1], [1, 1], and [1, 1] (considering different starting points).
+Therefore, the output is 3.
+    </code></pre>
+
+    <h3>Example 3:</h3>
+    <pre><code>
+Input: [1, 2, 1, 2, 1], k = 3
+Output: 4
+Explanation:
+Subarrays that sum to 3 are [1, 2], [2, 1], [1, 2], and [2, 1].
+Therefore, the output is 4.
+    </code></pre>
+
+    <h3>Example 4:</h3>
+    <pre><code>
+Input: [-1, -1, 1, 1], k = 0
+Output: 4
+Explanation:
+Subarrays that sum to 0 are [-1, 1], [1, -1], [-1, -1, 1, 1], and [-1, -1, 1, 1].
+Therefore, the output is 4.
+    </code></pre>
+
+    <h3>Example 5:</h3>
+    <pre><code>
+Input: [1, -1, 1, -1, 1], k = 0
+Output: 5
+Explanation:
+Subarrays that sum to 0 are [1, -1], [-1, 1], [1, -1], [1, -1, 1, -1], and [1, -1, 1, -1, 1].
+Therefore, the output is 5.
+    </code></pre>
+
+    <h2>Python Code:</h2>
+    <pre><code>
+def subarray_sum(nums, k):
+    cs = 0  # cumulative_sum
+    sum_count = {0: 1}
+    total_count = 0
+
+    for num in nums:
+        cs += num
+        if cs - k in sum_count:
+            total_count += sum_count[cs - k]
+        
+        if cs in sum_count:
+            sum_count[cs] += 1
+        else:
+            sum_count[cs] = 1
+    
+    return total_count
+
+nums = [1, 1, 1]
+k = 2
+print(subarray_sum(nums, k))
+    </code></pre>
+    <h2>Output:</h2>
+    <pre><code>2</code></pre>
+</body>
+</html>

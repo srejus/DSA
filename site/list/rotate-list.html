@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Array</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rotate Array</h1>
+    <p>Rotate the elements of an array by <code>k</code> steps to the right.</p>
+    <h2>Sample Input:</h2>
+    <pre><code>arr = [1, 2, 3, 4, 5, 6, 7], k = 3</code></pre>
+    <h2>Sample Output:</h2>
+    <pre><code>[5, 6, 7, 1, 2, 3, 4]</code></pre>
+    <h2>Python Code:</h2>
+    <pre><code>
+def rotate_arr(arr, k):
+    k = k % len(arr)
+    
+    if k == 0:
+        return arr
+
+    split_index = len(arr) - k
+    rotated_ary = arr[split_index:] + arr[:split_index]
+    return rotated_ary
+
+arr = [1, 2, 3, 4, 5, 6, 7]
+k = 3
+print(rotate_arr(arr, k))
+    </code></pre>
+    <h2>Output:</h2>
+    <pre><code>[5, 6, 7, 1, 2, 3, 4]</code></pre>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Permutations</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>String Permutations</h1>
+    <p>Generate all permutations of a string.</p>
+    
+    <h2>Python Code:</h2>
+    <pre><code>
+def permutation(s):
+    if len(s) == 0:
+        return ['']
+
+    perm_list = []
+    for i in range(len(s)):
+        part = s[:i] + s[i+1:]
+        for p in permutation(part):
+            perm_list.append(s[i] + p)
+
+    return perm_list
+
+res = permutation("abc")
+print(res)
+    </code></pre>
+    
+    <h2>Output:</h2>
+    <pre><code>['abc', 'acb', 'bac', 'bca', 'cab', 'cba']</code></pre>
+</body>
+</html>

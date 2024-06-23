@@ -1,0 +1,28 @@
+.mrow{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.mrow::-webkit-scrollbar {
+    display: none;
+  }
+
+.card{
+    padding: 15px;
+    border: 0.1px solid #ddd;
+    width: 350px;
+    margin:15px;
+}
+
+
+@media(max-width:852px) {
+    .mrow{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+}
+

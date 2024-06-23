@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-weight: 900;">Learn DSA</h1><br>
+        <div class="mrow">
+            <div class="card">
+                <h4 id="listTitle"><b>List</b></h4><br>
+                <ul id="listItems">
+                    <li>
+                        <a href="list/find-dups.html">Find Duplicates</a>
+                    </li>
+                    <li>
+                        <a href="list/product-except-self.html">Product Except Self</a>
+                    </li>
+                    <li>
+                        <a href="list/remove-duplicates.html">Remove Duplicates from sorted array</a>
+                    </li>
+                    <li>
+                        <a href="list/rev-list.html">Reverse List</a>
+                    </li>
+                    <li>
+                        <a href="list/rotate-list.html">Rotate List</a>
+                    </li>
+                    <li>
+                        <a href="list/subarray-sum.html">Subarray Sum</a>
+                    </li>
+                    <li>
+                        <a href="list/two-sum.html">Two Sum</a>
+                    </li>
+                    
+                </ul>
+
+                <script>
+                    // Count the number of <li> elements within the <ul>
+                    var listItems = document.getElementById('listItems');
+                    var itemCount = listItems.getElementsByTagName('li').length;
+
+                    // Update the title with the item count
+                    var listTitle = document.getElementById('listTitle');
+                    listTitle.textContent = 'List (' + itemCount + ')';
+                </script>
+            </div>
+
+            <div class="card">
+                <h4 id="reclistTitle"><b>Recursion</b></h4><br>
+                <ul id="reclistItems">
+                   
+                    <li>
+                        <a href="recursion/factorial.html">Factorial</a>
+                    </li>
+                    <li>
+                        <a href="recursion/fib.html">Fibonacci</a>
+                    </li>
+                    <li>
+                        <a href="recursion/permutation.html">Permutation</a>
+                    </li>
+                  
+                    <li>
+                        <a href="recursion/remove-adj-dups.html">Remove Adjacent Duplicates</a>
+                    </li>
+                    <li>
+                        <a href="recursion/subsequence.html">Subsequeunce</a>
+                    </li>
+                    <li>
+                        <a href="recursion/count-subseq.html">Count All Subsequeunce</a>
+                    </li>
+                    <li>
+                        <a href="recursion/print-subseq-with-sum-k.html">Print Subsequeunce with Sum K</a>
+                    </li>
+                    
+                </ul>
+
+                <script>
+                    // Count the number of <li> elements within the <ul>
+                    var listItems = document.getElementById('reclistItems');
+                    var itemCount = listItems.getElementsByTagName('li').length;
+
+                    // Update the title with the item count
+                    var listTitle = document.getElementById('reclistTitle');
+                    listTitle.textContent = 'Recursion (' + itemCount + ')';
+                </script>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

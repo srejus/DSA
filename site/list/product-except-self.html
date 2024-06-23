@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product of Array Except Self</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product of Array Except Self</h1>
+    <p>Given a list of integers, return an array such that each element at index <code>i</code> is the product of all the elements in the original list except the one at <code>i</code>.</p>
+    <h2>Explanation:</h2>
+    <p>Compute the product of all elements except the current one without using division.</p>
+    <h2>Sample Input:</h2>
+    <pre><code>[1, 2, 3, 4]</code></pre>
+    <h2>Sample Output:</h2>
+    <pre><code>[24, 12, 8, 6]</code></pre>
+    <h2>Complexity:</h2>
+    <p>O(n)</p>
+    <h2>Python Code:</h2>
+    <pre><code>
+def product_except_self(arr):
+    n = len(arr)
+    if n == 0:
+        return []
+
+    output = [1]*n
+    left_product = 1
+    for i in range(n):
+        output[i] = left_product
+        left_product *= arr[i]
+    
+    right_product = 1
+    for i in range(n-1,-1,-1):
+        output[i] *= right_product
+        right_product *= arr[i]
+    
+    return output
+
+nums = [1, 2, 3, 4]
+print(product_except_self(nums))
+    </code></pre>
+    <h2>Output:</h2>
+    <pre><code>[24, 12, 8, 6]</code></pre>
+</body>
+</html>

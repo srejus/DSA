@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Sum Problem</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Two Sum Problem</h1>
+    <p>Given a list of integers and a target sum, find two distinct elements in the list that add up to the target sum.</p>
+    
+    <h2>Sample Input:</h2>
+    <pre><code>[2, 7, 11, 15], target = 9</code></pre>
+    
+    <h2>Sample Output:</h2>
+    <pre><code>[0, 1] (since 2 + 7 = 9)</code></pre>
+    
+    <h2>Complexity:</h2>
+    <p>O(n) using a dictionary</p>
+
+    <h2>Python Code:</h2>
+    <pre><code>
+def two_sum(arr, k):
+    seen = set()
+    for i in arr:
+        if k - i in seen:
+            return True
+        seen.add(i)
+    
+    return False
+
+arr = [2, 7, 11, 15]
+k = 9
+x = two_sum(arr, k)
+print(x)
+    </code></pre>
+    
+    <h2>Output:</h2>
+    <pre><code>True</code></pre>
+</body>
+</html>
