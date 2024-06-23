@@ -4,24 +4,32 @@ Question: Given an integer n, find the nth Fibonacci number.
 Sample Input: n = 5
 Sample Output: 5
 Explanation: The first five Fibonacci numbers are 0, 1, 1, 2, 3, and 5.
+
+
 2. Factorial
 Question: Given an integer n, compute the factorial of n (denoted as n!).
 
 Sample Input: n = 4
 Sample Output: 24
 Explanation: 4! = 4 * 3 * 2 * 1 = 24
+
+
 3. Palindrome Check
 Question: Given a string, determine if it is a palindrome.
 
 Sample Input: "racecar"
 Sample Output: True
 Explanation: "racecar" reads the same forwards and backwards.
+
+
 4. Sum of Digits
 Question: Given a non-negative integer, find the sum of its digits.
 
 Sample Input: n = 1234
 Sample Output: 10
 Explanation: 1 + 2 + 3 + 4 = 10
+
+
 5. Tower of Hanoi
 Question: Given n disks, find the sequence of moves required to solve the Tower of Hanoi problem.
 
@@ -36,54 +44,74 @@ Move disk 3 from rod A to rod C
 Move disk 1 from rod B to rod A
 Move disk 2 from rod B to rod C
 Move disk 1 from rod A to rod C
+
+
 6. Generate All Subsets
 Question: Given a list of integers, generate all possible subsets.
 
 Sample Input: [1, 2, 3]
 Sample Output: [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]
+
+
 7. Reverse a String
 Question: Given a string, reverse it using recursion.
 
 Sample Input: "hello"
 Sample Output: "olleh"
+
+
 8. Binary Search
 Question: Given a sorted list of integers and a target value, use binary search to find the index of the target value. If the target is not present, return -1.
 
 Sample Input: arr = [1, 2, 3, 4, 5], target = 3
 Sample Output: 2
+
+
 9. Merge Sort
 Question: Given a list of integers, sort it using the merge sort algorithm.
 
 Sample Input: [4, 1, 5, 2, 3]
 Sample Output: [1, 2, 3, 4, 5]
+
+
 10. All Permutations of a String
 Question: Given a string, generate all possible permutations of the characters in the string.
 
 Sample Input: "abc"
 Sample Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+
 11. Count Ways to Climb Stairs
 Question: Given n stairs, find the number of distinct ways to climb to the top. You can either climb 1 or 2 steps at a time.
 
 Sample Input: n = 4
 Sample Output: 5
 Explanation: The distinct ways to climb 4 stairs are: (1,1,1,1), (1,1,2), (1,2,1), (2,1,1), (2,2).
+
+
 12. Subarray Sum Equals K
 Question: Given a list of integers and an integer k, find the total number of continuous subarrays whose sum equals k.
 
 Sample Input: [1, 1, 1], k = 2
 Sample Output: 2
 Explanation: The subarrays [1, 1] and [1, 1] both sum to 2.
+
+
 13. Longest Common Subsequence
 Question: Given two strings, find the length of their longest common subsequence.
 
 Sample Input: s1 = "abcde", s2 = "ace"
 Sample Output: 3
 Explanation: The longest common subsequence is "ace".
+
+
 14. Power Set
 Question: Given a string, find all possible subsets (the power set) of the characters in the string.
 
 Sample Input: "abc"
 Sample Output: ["", "a", "b", "c", "ab", "ac", "bc", "abc"]
+
+
 15. N-Queens Problem
 Question: Place n queens on an n x n chessboard such that no two queens threaten each other.
 
