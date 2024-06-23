@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum of Digits</h1>
+    <p>Given a non-negative integer, find the sum of its digits using recursion.</p>
+    
+    <h2>Python Code:</h2>
+    <pre><code>
+def sum_of_digits(n):
+    if n == 0:
+        return 0
+    return n % 10 + sum_of_digits(n // 10)
+
+# Example usage
+n = 1234
+print(sum_of_digits(n))  # Output: 10
+    </code></pre>
+    
+    <h2>Output:</h2>
+    <pre><code>10</code></pre>
+</body>
+</html>
