@@ -1,3 +1,7 @@
+'''
+Invert binary Tree or Mirror binary Tree
+'''
+
 def mirror_tree(node):
     if not node:
         return None
