@@ -33,6 +33,26 @@ class Linkedlist:
         while curr:
             print(curr.data)
             curr = curr.next
+        
+    
+    def delete(self,data):
+        if self.head is None:
+            print("Empty List!")
+            return
+
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+
+        curr = self.head
+        while curr.next and curr.next.data != data:
+            curr = curr.next
+
+        if curr.next:
+            curr.next = curr.next.next
+        else:
+            print("Not found!")
+            
     
     
         
