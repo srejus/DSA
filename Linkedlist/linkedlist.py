@@ -26,6 +26,14 @@ class Linkedlist:
         new_node.next = self.head
         self.head = new_node
     
+    def print_data(self):
+        if self.head is None:
+            return None
+        curr = self.head
+        while curr:
+            print(curr.data)
+            curr = curr.next
+    
     
         
 
