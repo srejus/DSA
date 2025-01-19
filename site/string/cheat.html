@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Function</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            overflow-x: auto;
+            background-color: #fff;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        td {
+            background-color: #f4f4f4;
+        }
+        code {
+            background-color: #eef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+                font-size: 14px;
+            }
+            table, th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+            h1, h2 {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            th, td {
+                padding: 6px;
+            }
+            h1 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>String CheatSheet</h1>
+    <h2>1. String Creation</h2>
+    <code>
+        s1 = "Hello"<br>
+        s2 = 'World'<br>
+        s3 = """Multi-line<br>String"""
+    </code>
+
+    <h2>2. Common Methods</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Syntax</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Length</td>
+                <td><code>len(s)</code></td>
+                <td><code>len("Hello")</code> → 5</td>
+            </tr>
+            <tr>
+                <td>Lowercase</td>
+                <td><code>s.lower()</code></td>
+                <td><code>"HeLLo".lower()</code> → "hello"</td>
+            </tr>
+            <tr>
+                <td>Uppercase</td>
+                <td><code>s.upper()</code></td>
+                <td><code>"hello".upper()</code> → "HELLO"</td>
+            </tr>
+            <tr>
+                <td>Title Case</td>
+                <td><code>s.title()</code></td>
+                <td><code>"hello world".title()</code> → "Hello World"</td>
+            </tr>
+            <tr>
+                <td>Strip Whitespaces</td>
+                <td><code>s.strip()</code></td>
+                <td><code>"  Hello  ".strip()</code> → "Hello"</td>
+            </tr>
+            <tr>
+                <td>Replace Substring</td>
+                <td><code>s.replace(old, new)</code></td>
+                <td><code>"Hello World".replace("World", "Python")</code> → "Hello Python"</td>
+            </tr>
+            <tr>
+                <td>Find Substring Index</td>
+                <td><code>s.find(sub)</code></td>
+                <td><code>"Hello".find("l")</code> → 2</td>
+            </tr>
+            <tr>
+                <td>Check Start</td>
+                <td><code>s.startswith(sub)</code></td>
+                <td><code>"Hello".startswith("He")</code> → True</td>
+            </tr>
+            <tr>
+                <td>Check End</td>
+                <td><code>s.endswith(sub)</code></td>
+                <td><code>"Hello".endswith("o")</code> → True</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Accessing and Slicing</h2>
+    <code>
+        s = "Hello World"<br>
+        Access: <code>s[0]</code> → 'H'<br>
+        Slice: <code>s[0:5]</code> → "Hello"<br>
+        Reverse: <code>s[::-1]</code> → "dlroW olleH"
+    </code>
+
+    <h2>4. Concatenation and Repetition</h2>
+    <code>
+        s1 = "Hello"<br>
+        s2 = "World"<br>
+        Concatenate: <code>s1 + s2</code> → "HelloWorld"<br>
+        Add space: <code>s1 + " " + s2</code> → "Hello World"<br>
+        Repeat: <code>s1 * 3</code> → "HelloHelloHello"
+    </code>
+
+    <h2>5. Split and Join</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Syntax</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Split into list</td>
+                <td><code>s.split()</code></td>
+                <td><code>"a b c".split()</code> → ['a', 'b', 'c']</td>
+            </tr>
+            <tr>
+                <td>Split by delimiter</td>
+                <td><code>s.split(delim)</code></td>
+                <td><code>"a,b,c".split(",")</code> → ['a', 'b', 'c']</td>
+            </tr>
+            <tr>
+                <td>Join list into string</td>
+                <td><code>delimiter.join(list)</code></td>
+                <td><code>",".join(['a', 'b', 'c'])</code> → "a,b,c"</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>6. Checking Conditions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Syntax</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alphabetic</td>
+                <td><code>s.isalpha()</code></td>
+                <td><code>"Hello".isalpha()</code> → True</td>
+            </tr>
+            <tr>
+                <td>Numeric</td>
+                <td><code>s.isdigit()</code></td>
+                <td><code>"123".isdigit()</code> → True</td>
+            </tr>
+            <tr>
+                <td>Alphanumeric</td>
+                <td><code>s.isalnum()</code></td>
+                <td><code>"Hello123".isalnum()</code> → True</td>
+            </tr>
+            <tr>
+                <td>Lowercase</td>
+                <td><code>s.islower()</code></td>
+                <td><code>"hello".islower()</code> → True</td>
+            </tr>
+            <tr>
+                <td>Uppercase</td>
+                <td><code>s.isupper()</code></td>
+                <td><code>"HELLO".isupper()</code> → True</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>7. Formatting Strings</h2>
+    <code>
+        name = "Alice"<br>
+        age = 25<br>
+        Old: <code>"Name: %s, Age: %d" % (name, age)</code><br>
+        Format: <code>"Name: {}, Age: {}".format(name, age)</code><br>
+        f-strings: <code>f"Name: {name}, Age: {age}"</code>
+    </code>
+</body>
+</html>
